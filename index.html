@@ -13,7 +13,6 @@
         color: #e0e0e0;
     }
 
-    /* COLORI */
     :root {
         --gold: #c6a667;
         --dark: #0d0d0d;
@@ -23,9 +22,16 @@
 
     header {
         background: linear-gradient(180deg, #000000, #1a1a1a);
-        padding: 60px 20px;
-        text-align: center;
+        padding: 40px 20px;
         border-bottom: 2px solid var(--gold);
+    }
+
+    header .container {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     header h1 {
@@ -37,8 +43,18 @@
 
     header p {
         font-size: 18px;
-        color: #e0e0e0;
         opacity: 0.85;
+    }
+
+    .lang-switcher span {
+        cursor: pointer;
+        color: var(--gold);
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .lang-switcher span:hover {
+        opacity: 0.6;
     }
 
     section {
@@ -101,95 +117,135 @@
 <body>
 
 <header>
-    <h1>STRUCTURED ENGINEERING S.R.L.</h1>
-    <p>Engineering Structure. Operational Continuity.</p>
+    <div class="container">
+        <div>
+            <h1 data-key="title">STRUCTURED ENGINEERING S.R.L.</h1>
+            <p data-key="subtitle">Engineering Structure. Operational Continuity.</p>
+        </div>
+
+        <div class="lang-switcher">
+            <span class="lang-btn" data-lang="it">IT</span> |
+            <span class="lang-btn" data-lang="en">EN</span> |
+            <span class="lang-btn" data-lang="ro">RO</span>
+        </div>
+    </div>
 </header>
 
 <section>
-    <h2>Continuità Operativa e Eccellenza Strutturata</h2>
-    <p>“Structured Engineering trasforma le sfide operative in opportunità di crescita sostenibile,
-    garantendo continuità, affidabilità e eccellenza produttiva.”</p>
+    <h2 data-key="intro_title">Continuità Operativa e Eccellenza Strutturata</h2>
+    <p data-key="intro_text">
+        Structured Engineering trasforma le sfide operative in opportunità di crescita sostenibile,
+        garantendo continuità, affidabilità e eccellenza produttiva.
+    </p>
 </section>
 
 <section>
-    <h2>Sfide Industriali Attuali</h2>
-    <div class="grid">
-        <div class="card"><h3>Downtime Non Pianificato</h3><p>Fermi macchina frequenti riducono la produttività e aumentano i costi operativi.</p></div>
-        <div class="card"><h3>Perdita di Competenze Critiche</h3><p>Dipendenza da singoli esperti crea vulnerabilità organizzativa.</p></div>
-        <div class="card"><h3>Margini Erosi</h3><p>Inefficienze e sprechi riducono la redditività.</p></div>
-        <div class="card"><h3>Processi Non Standardizzati</h3><p>Mancanza di procedure strutturate genera variabilità e problemi qualità.</p></div>
-    </div>
-</section>
-
-<section>
-    <h2>La Nostra Visione</h2>
-    <div class="grid">
-        <div class="card"><h3>Continuità Operativa</h3><p>Stabilità e affidabilità nei processi produttivi.</p></div>
-        <div class="card"><h3>Eccellenza Strutturata</h3><p>Processi ottimizzati e standardizzati.</p></div>
-        <div class="card"><h3>Crescita Sostenibile</h3><p>Risultati misurabili e durevoli nel tempo.</p></div>
-    </div>
-</section>
-
-<section>
-    <h2>Metodologia Operativa</h2>
-    <div class="grid">
-        <div class="card"><h3>1. Analisi Diagnostica</h3><p>Identificazione colli di bottiglia e opportunità.</p></div>
-        <div class="card"><h3>2. Progettazione Strutturata</h3><p>Soluzioni personalizzate con timeline e deliverables.</p></div>
-        <div class="card"><h3>3. Implementazione</h3><p>Monitoraggio KPI e stabilizzazione dei risultati.</p></div>
-    </div>
-</section>
-
-<section>
-    <h2>Servizi Principali</h2>
-    <div class="grid">
-        <div class="card"><h3>Ottimizzazione Processi</h3></div>
-        <div class="card"><h3>Trasferimento Know‑How</h3></div>
-        <div class="card"><h3>Standardizzazione Operativa</h3></div>
-        <div class="card"><h3>Consulenza Strategica</h3></div>
-        <div class="card"><h3>CAD & 3D Design</h3></div>
-        <div class="card"><h3>Technical Governance</h3></div>
-        <div class="card"><h3>Competency Stabilization</h3></div>
-    </div>
-</section>
-
-<section>
-    <h2>Competenze Trasversali</h2>
-    <div class="grid">
-        <div class="card"><h3>Asportazione Truciolo</h3></div>
-        <div class="card"><h3>Automazione & Robotica</h3></div>
-        <div class="card"><h3>Assemblaggio & Qualità</h3></div>
-        <div class="card"><h3>Logistica & Supply Chain</h3></div>
-        <div class="card"><h3>Materiali: Sinterizzati</h3></div>
-        <div class="card"><h3>Leghe Leggere</h3></div>
-        <div class="card"><h3>Ghisa</h3></div>
-        <div class="card"><h3>Acciaio</h3></div>
-    </div>
-</section>
-
-<section>
-    <h2>Case Study</h2>
+    <h2 data-key="challenges_title">Sfide Industriali Attuali</h2>
     <div class="grid">
         <div class="card">
-            <h3>Case Study 1</h3>
-            <p>-35% Downtime<br>-25% Costi Operativi<br>+40% Produttività<br>+18% Margini</p>
+            <h3 data-key="ch1_title">Downtime Non Pianificato</h3>
+            <p data-key="ch1_text">Fermi macchina frequenti riducono la produttività e aumentano i costi operativi.</p>
         </div>
+
         <div class="card">
-            <h3>Case Study 2</h3>
-            <p>100% Continuità Operativa<br>3 Operatori Certificati<br>-40% Tempo Lavorazione<br>+25% Affidabilità</p>
+            <h3 data-key="ch2_title">Perdita di Competenze Critiche</h3>
+            <p data-key="ch2_text">Dipendenza da singoli esperti crea vulnerabilità organizzativa.</p>
+        </div>
+
+        <div class="card">
+            <h3 data-key="ch3_title">Margini Erosi</h3>
+            <p data-key="ch3_text">Inefficienze e sprechi riducono la redditività.</p>
+        </div>
+
+        <div class="card">
+            <h3 data-key="ch4_title">Processi Non Standardizzati</h3>
+            <p data-key="ch4_text">Mancanza di procedure strutturate genera variabilità e problemi qualità.</p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Contatti</h2>
-    <p>Email: <a href="mailto:strueng2026@proton.me">strueng2026@proton.me</a></p>
-    <p>Telefono: +39 389 78.70.017</p>
-    <p>Sede: Italia</p>
+    <h2 data-key="vision_title">La Nostra Visione</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 data-key="v1_title">Continuità Operativa</h3>
+            <p data-key="v1_text">Stabilità e affidabilità nei processi produttivi.</p>
+        </div>
+
+        <div class="card">
+            <h3 data-key="v2_title">Eccellenza Strutturata</h3>
+            <p data-key="v2_text">Processi ottimizzati e standardizzati.</p>
+        </div>
+
+        <div class="card">
+            <h3 data-key="v3_title">Crescita Sostenibile</h3>
+            <p data-key="v3_text">Risultati misurabili e durevoli nel tempo.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 data-key="method_title">Metodologia Operativa</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 data-key="m1_title">1. Analisi Diagnostica</h3>
+            <p data-key="m1_text">Identificazione colli di bottiglia e opportunità.</p>
+        </div>
+
+        <div class="card">
+            <h3 data-key="m2_title">2. Progettazione Strutturata</h3>
+            <p data-key="m2_text">Soluzioni personalizzate con timeline e deliverables.</p>
+        </div>
+
+        <div class="card">
+            <h3 data-key="m3_title">3. Implementazione</h3>
+            <p data-key="m3_text">Monitoraggio KPI e stabilizzazione dei risultati.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 data-key="services_title">Servizi Principali</h2>
+    <div class="grid">
+        <div class="card"><h3 data-key="s1">Ottimizzazione Processi</h3></div>
+        <div class="card"><h3 data-key="s2">Trasferimento Know‑How</h3></div>
+        <div class="card"><h3 data-key="s3">Standardizzazione Operativa</h3></div>
+        <div class="card"><h3 data-key="s4">Consulenza Strategica</h3></div>
+        <div class="card"><h3 data-key="s5">CAD & 3D Design</h3></div>
+        <div class="card"><h3 data-key="s6">Technical Governance</h3></div>
+        <div class="card"><h3 data-key="s7">Competency Stabilization</h3></div>
+    </div>
+</section>
+
+<section>
+    <h2 data-key="contacts_title">Contatti</h2>
+    <p>Email: <a href="mailto:strueng2026@proton.me" data-key="email">strueng2026@proton.me</a></p>
+    <p data-key="phone">Telefono: +39 389 78.70.017</p>
+    <p data-key="location">Sede: Italia</p>
 </section>
 
 <footer>
     Structured Engineering S.R.L. — Engineering Structure. Operational Continuity.
 </footer>
+
+<script src="lang.js"></script>
+
+<script>
+    const langButtons = document.querySelectorAll('.lang-btn');
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            applyLanguage(lang);
+        });
+    });
+
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            el.innerHTML = translations[lang][el.getAttribute('data-key')];
+        });
+    }
+</script>
 
 </body>
 </html>
