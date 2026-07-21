@@ -161,38 +161,38 @@
     #text-right { right: -120px; }
 
     /* GDPR COOKIE BANNER */
-    #cookie-banner {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: #111;
-        border-top: 2px solid var(--gold);
-        padding: 15px 20px;
-        color: #e0e0e0;
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        z-index: 9999;
-    }
-
-    #cookie-banner span {
+   #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 20px); /* evita overflow */
+    background: #111;
+    border-top: 2px solid var(--gold);
+    padding: 15px 10px; /* più stretto, evita uscita */
+    color: #e0e0e0;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    z-index: 9999;
+    box-sizing: border-box; /* fondamentale */
+}
+   #cookie-banner span {
         line-height: 1.4;
     }
 
-    #cookie-banner button {
-        background: var(--gold);
-        color: #000;
-        border: none;
-        padding: 8px 15px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 4px;
-        align-self: flex-end;
-    }
-
+   #cookie-banner button {
+    background: var(--gold);
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    align-self: flex-end;
+    max-width: 100%; /* evita overflow */
+}
     #cookie-banner button:hover {
         opacity: 0.8;
     }
