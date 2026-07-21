@@ -101,6 +101,7 @@
         padding: 25px;
         border: 1px solid #222;
         border-radius: 8px;
+        cursor: pointer;
     }
 
     .card:hover {
@@ -161,53 +162,86 @@
     #text-right { right: -120px; }
 
     /* GDPR COOKIE BANNER */
-   #cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: calc(100% - 20px); /* evita overflow */
-    background: #111;
-    border-top: 2px solid var(--gold);
-    padding: 15px 10px; /* più stretto, evita uscita */
-    color: #e0e0e0;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    z-index: 9999;
-    box-sizing: border-box; /* fondamentale */
-}
-   #cookie-banner span {
+    #cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 20px);
+        background: #111;
+        border-top: 2px solid var(--gold);
+        padding: 15px 10px;
+        color: #e0e0e0;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        z-index: 9999;
+        box-sizing: border-box;
+    }
+
+    #cookie-banner span {
         line-height: 1.4;
     }
 
-   #cookie-banner button {
-    background: var(--gold);
-    color: #000;
-    border: none;
-    padding: 8px 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    align-self: flex-end;
-    max-width: 100%; /* evita overflow */
-}
+    #cookie-banner button {
+        background: var(--gold);
+        color: #000;
+        border: none;
+        padding: 8px 15px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+        align-self: flex-end;
+        max-width: 100%;
+    }
+
     #cookie-banner button:hover {
         opacity: 0.8;
+    }
+
+    /* CARD DETAILS PANEL */
+    .card-details {
+        display: none;
+        background: #0f0f0f;
+        border: 1px solid var(--gold);
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 8px;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .card-details p {
+        margin: 8px 0;
+        line-height: 1.5;
+    }
+
+    .card-details .close-btn {
+        float: right;
+        cursor: pointer;
+        color: var(--gold);
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .card-details .close-btn:hover {
+        opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(5px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 </style>
 </head>
 <body>
 
-<!-- PATTERN + TESTO VERTICALE -->
 <div id="pattern-left" class="side-pattern"></div>
 <div id="pattern-right" class="side-pattern"></div>
 
 <div id="text-left" class="side-text">ENGINEERING STRUCTURE — OPERATIONAL CONTINUITY</div>
 <div id="text-right" class="side-text">STRUCTURED • RELIABLE • CONTINUOUS</div>
 
-<!-- BANNER COOKIE / GDPR -->
 <div id="cookie-banner">
     <span id="cookie-text" data-key="cookie_banner_text"></span>
     <button id="cookie-ok-btn" data-key="cookie_banner_ok"></button>
@@ -239,22 +273,22 @@
 <section>
     <h2 data-key="challenges_title"></h2>
     <div class="grid">
-        <div class="card">
+        <div class="card" onclick="openDetails('details1')">
             <h3 data-key="ch1_title"></h3>
             <p data-key="ch1_text"></p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="openDetails('details2')">
             <h3 data-key="ch2_title"></h3>
             <p data-key="ch2_text"></p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="openDetails('details3')">
             <h3 data-key="ch3_title"></h3>
             <p data-key="ch3_text"></p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="openDetails('details4')">
             <h3 data-key="ch4_title"></h3>
             <p data-key="ch4_text"></p>
         </div>
@@ -262,66 +296,88 @@
 </section>
 
 <section>
-    <h2 data-key="vision_title"></h2>
-    <div class="grid">
-        <div class="card">
-            <h3 data-key="v1_title"></h3>
-            <p data-key="v1_text"></p>
-        </div>
-
-        <div class="card">
-            <h3 data-key="v2_title"></h3>
-            <p data-key="v2_text"></p>
-        </div>
-
-        <div class="card">
-            <h3 data-key="v3_title"></h3>
-            <p data-key="v3_text"></p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2 data-key="method_title"></h2>
-    <div class="grid">
-        <div class="card">
-            <h3 data-key="m1_title"></h3>
-            <p data-key="m1_text"></p>
-        </div>
-
-        <div class="card">
-            <h3 data-key="m2_title"></h3>
-            <p data-key="m2_text"></p>
-        </div>
-
-        <div class="card">
-            <h3 data-key="m3_title"></h3>
-            <p data-key="m3_text"></p>
-        </div>
-    </div>
-</section>
-
-<section>
     <h2 data-key="services_title"></h2>
-    <div class="grid">
-        <div class="card"><h3 data-key="s1"></h3></div>
-        <div class="card"><h3 data-key="s2"></h3></div>
-        <div class="card"><h3 data-key="s3"></h3></div>
-        <div class="card"><h3 data-key="s4"></h3></div>
-        <div class="card"><h3 data-key="s5"></h3></div>
-        <div class="card"><h3 data-key="s6"></h3></div>
-        <div class="card"><h3 data-key="s7"></h3></div>
-    </div>
-</section>
 
-<section>
-    <div style="margin-top:30px; text-align:center;">
-        <img src="qrcode.png" alt="QR Code Structured Engineering" style="width:180px; border:2px solid var(--gold); padding:10px; border-radius:10px;">
-        <p style="margin-top:10px; color:var(--gold); font-size:14px;">Scan & Connect</p>
+    <div class="grid">
+
+        <!-- CARD 1 -->
+        <div class="card" onclick="openDetails('s1_details')">
+            <h3 data-key="s1"></h3>
+            <div id="s1_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's1_details')">×</span>
+                <p data-key="s1_d1"></p>
+                <p data-key="s1_d2"></p>
+                <p data-key="s1_d3"></p>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card" onclick="openDetails('s2_details')">
+            <h3 data-key="s2"></h3>
+            <div id="s2_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's2_details')">×</span>
+                <p data-key="s2_d1"></p>
+                <p data-key="s2_d2"></p>
+                <p data-key="s2_d3"></p>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card" onclick="openDetails('s3_details')">
+            <h3 data-key="s3"></h3>
+            <div id="s3_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's3_details')">×</span>
+                <p data-key="s3_d1"></p>
+                <p data-key="s3_d2"></p>
+                <p data-key="s3_d3"></p>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card" onclick="openDetails('s4_details')">
+            <h3 data-key="s4"></h3>
+            <div id="s4_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's4_details')">×</span>
+                <p data-key="s4_d1"></p>
+                <p data-key="s4_d2"></p>
+                <p data-key="s4_d3"></p>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card" onclick="openDetails('s5_details')">
+            <h3 data-key="s5"></h3>
+            <div id="s5_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's5_details')">×</span>
+                <p data-key="s5_d1"></p>
+                <p data-key="s5_d2"></p>
+                <p data-key="s5_d3"></p>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card" onclick="openDetails('s6_details')">
+            <h3 data-key="s6"></h3>
+            <div id="s6_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's6_details')">×</span>
+                <p data-key="s6_d1"></p>
+                <p data-key="s6_d2"></p>
+                <p data-key="s6_d3"></p>
+            </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="card" onclick="openDetails('s7_details')">
+            <h3 data-key="s7"></h3>
+            <div id="s7_details" class="card-details">
+                <span class="close-btn" onclick="closeDetails(event, 's7_details')">×</span>
+                <p data-key="s7_d1"></p>
+                <p data-key="s7_d2"></p>
+                <p data-key="s7_d3"></p>
+            </div>
+        </div>
+
     </div>
-    <p data-key="email"></p>
-    <p data-key="phone"></p>
-    <p data-key="location"></p>
 </section>
 
 <section id="privacy">
@@ -341,8 +397,6 @@
 <footer>
     Structured Engineering S.R.L. — Engineering Structure. Operational Continuity.
 </footer>
-<script src="lang.js"></script>
-
 <script>
     const langButtons = document.querySelectorAll('.lang-btn');
     const cookieBanner = document.getElementById('cookie-banner');
@@ -369,6 +423,23 @@
     });
 
     applyLanguage('it');
+
+    /* CARD DETAILS */
+    function openDetails(id) {
+        document.querySelectorAll('.card-details').forEach(el => el.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+    }
+
+    function closeDetails(event, id) {
+        event.stopPropagation();
+        document.getElementById(id).style.display = 'none';
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.card')) {
+            document.querySelectorAll('.card-details').forEach(el => el.style.display = 'none');
+        }
+    });
 </script>
 
 </body>
