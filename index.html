@@ -142,40 +142,42 @@
         opacity: 0.7;
     }
 
-    /* PATTERN TECNICO LATERALE */
-    .side-pattern {
-        position: fixed;
-        top: 0;
-        width: 60px;
-        height: 100vh;
-        background-image: repeating-linear-gradient(
-            to bottom,
-            rgba(198, 166, 103, 0.08) 0px,
-            rgba(198, 166, 103, 0.08) 1px,
-            transparent 1px,
-            transparent 8px
-        );
-        z-index: 997;
-    }
+/* PATTERN TECNICO LATERALE — VERSIONE CORRETTA */
+.side-pattern {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(198, 166, 103, 0.10) 0px,
+        rgba(198, 166, 103, 0.10) 1px,
+        transparent 1px,
+        transparent 10px
+    );
+    z-index: 1;
+    pointer-events: none;
+}
 
-    #pattern-left { left: 0; }
-    #pattern-right { right: 0; }
+#pattern-left { left: 0; }
+#pattern-right { right: 0; }
 
-    /* TESTO VERTICALE CORPORATE */
-    .side-text {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%) rotate(-90deg);
-        font-size: 12px;
-        letter-spacing: 3px;
-        color: var(--gold);
-        opacity: 0.35;
-        z-index: 998;
-        font-weight: bold;
-    }
+/* TESTO VERTICALE CORPORATE — CORRETTO */
+.side-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    opacity: 0.35;
+    z-index: 2;
+    font-weight: bold;
+    pointer-events: none;
+}
 
-    #text-left { left: -120px; }
-    #text-right { right: -120px; }
+#text-left { left: -120px; }
+#text-right { right: -120px; }
 
     /* GDPR COOKIE BANNER */
     #cookie-banner {
