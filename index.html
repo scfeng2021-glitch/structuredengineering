@@ -21,9 +21,11 @@
         background-color: #0d0d0d;
         color: #e0e0e0;
     }
-section:first-of-type {
-    margin-top: 60px;
-}
+
+    section:first-of-type {
+        margin-top: 60px;
+    }
+
     :root {
         --gold: #c6a667;
         --dark: #0d0d0d;
@@ -122,21 +124,78 @@ section:first-of-type {
     a:hover {
         opacity: 0.7;
     }
+
+    /* ----------------------------- */
+    /* PATTERN TECNICO LATERALE      */
+    /* ----------------------------- */
+    .side-pattern {
+        position: fixed;
+        top: 0;
+        width: 60px;
+        height: 100vh;
+        background-image: repeating-linear-gradient(
+            to bottom,
+            rgba(198, 166, 103, 0.08) 0px,
+            rgba(198, 166, 103, 0.08) 1px,
+            transparent 1px,
+            transparent 8px
+        );
+        z-index: 997;
+    }
+
+    #pattern-left {
+        left: 0;
+    }
+
+    #pattern-right {
+        right: 0;
+    }
+
+    /* ----------------------------- */
+    /* TESTO VERTICALE CORPORATE     */
+    /* ----------------------------- */
+    .side-text {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        opacity: 0.35;
+        z-index: 998;
+        font-weight: bold;
+    }
+
+    #text-left {
+        left: -120px;
+    }
+
+    #text-right {
+        right: -120px;
+    }
 </style>
 
 </head>
 
 <body>
 
+<!-- PATTERN + TESTO VERTICALE -->
+<div id="pattern-left" class="side-pattern"></div>
+<div id="pattern-right" class="side-pattern"></div>
+
+<div id="text-left" class="side-text">ENGINEERING STRUCTURE — OPERATIONAL CONTINUITY</div>
+<div id="text-right" class="side-text">STRUCTURED • RELIABLE • CONTINUOUS</div>
+
 <header>
     <div class="container">
-        <div>
-            <div style="display:flex; align-items:center; gap:20px;">
-    <img src="logo.png" alt="Structured Engineering Logo" style="height:70px;">
-    <div>
-        <h1 data-key="title">STRUCTURED ENGINEERING S.R.L.</h1>
-        <p data-key="subtitle">Engineering Structure. Operational Continuity.</p>
-    </div>
+        <div style="display:flex; align-items:center; gap:20px;">
+            <img src="logo.png" alt="Structured Engineering Logo" style="height:70px;">
+            <div>
+                <h1 data-key="title">STRUCTURED ENGINEERING S.R.L.</h1>
+                <p data-key="subtitle">Engineering Structure. Operational Continuity.</p>
+            </div>
+        </div>
+
         <div class="lang-switcher">
             <span class="lang-btn" data-lang="it">IT</span> |
             <span class="lang-btn" data-lang="en">EN</span> |
@@ -233,9 +292,9 @@ section:first-of-type {
 
 <section>
     <div style="margin-top:30px; text-align:center;">
-    <img src="qrcode.png" alt="QR Code Structured Engineering" style="width:180px; border:2px solid var(--gold); padding:10px; border-radius:10px;">
-    <p style="margin-top:10px; color:var(--gold); font-size:14px;">Scan & Connect</p>
-</div>
+        <img src="qrcode.png" alt="QR Code Structured Engineering" style="width:180px; border:2px solid var(--gold); padding:10px; border-radius:10px;">
+        <p style="margin-top:10px; color:var(--gold); font-size:14px;">Scan & Connect</p>
+    </div>
     <p>Email: <a href="mailto:strueng2026@proton.me" data-key="email">strueng2026@proton.me</a></p>
     <p data-key="phone">Telefono: +39 389 78.70.017</p>
     <p data-key="location">Sede: Italia</p>
