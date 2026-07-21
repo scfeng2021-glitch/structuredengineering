@@ -172,7 +172,7 @@
         color: #e0e0e0;
         font-size: 14px;
         display: flex;
-        flex-direction: column;      /* SEMPRE colonna: pulsante sotto, mai fuori */
+        flex-direction: column;
         gap: 10px;
         align-items: flex-start;
         z-index: 9999;
@@ -190,16 +190,14 @@
         font-weight: bold;
         cursor: pointer;
         border-radius: 4px;
-        align-self: flex-end;        /* pulsante allineato a destra ma dentro il banner */
+        align-self: flex-end;
     }
 
     #cookie-banner button:hover {
         opacity: 0.8;
     }
 </style>
-
 </head>
-
 <body>
 
 <!-- PATTERN + TESTO VERTICALE -->
@@ -212,7 +210,7 @@
 <!-- BANNER COOKIE / GDPR -->
 <div id="cookie-banner">
     <span id="cookie-text" data-key="cookie_banner_text"></span>
-    <button id="cookie-ok-btn" data-key="cookie_banner_ok">OK</button>
+    <button id="cookie-ok-btn" data-key="cookie_banner_ok"></button>
 </div>
 
 <header>
@@ -220,8 +218,8 @@
         <div style="display:flex; align-items:center; gap:20px;">
             <img src="logo.png" alt="Structured Engineering Logo" style="height:70px;">
             <div>
-                <h1 data-key="title">STRUCTURED ENGINEERING S.R.L.</h1>
-                <p data-key="subtitle">Engineering Structure. Operational Continuity.</p>
+                <h1 data-key="title"></h1>
+                <p data-key="subtitle"></p>
             </div>
         </div>
 
@@ -234,88 +232,85 @@
 </header>
 
 <section>
-    <h2 data-key="intro_title">Continuità Operativa e Eccellenza Strutturata</h2>
-    <p data-key="intro_text">
-        Structured Engineering trasforma le sfide operative in opportunità di crescita sostenibile,
-        garantendo continuità, affidabilità e eccellenza produttiva.
-    </p>
+    <h2 data-key="intro_title"></h2>
+    <p data-key="intro_text"></p>
 </section>
 
 <section>
-    <h2 data-key="challenges_title">Sfide Industriali Attuali</h2>
+    <h2 data-key="challenges_title"></h2>
     <div class="grid">
         <div class="card">
-            <h3 data-key="ch1_title">Downtime Non Pianificato</h3>
-            <p data-key="ch1_text">Fermi macchina frequenti riducono la produttività e aumentano i costi operativi.</p>
+            <h3 data-key="ch1_title"></h3>
+            <p data-key="ch1_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="ch2_title">Perdita di Competenze Critiche</h3>
-            <p data-key="ch2_text">Dipendenza da singoli esperti crea vulnerabilità organizzativa.</p>
+            <h3 data-key="ch2_title"></h3>
+            <p data-key="ch2_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="ch3_title">Margini Erosi</h3>
-            <p data-key="ch3_text">Inefficienze e sprechi riducono la redditività.</p>
+            <h3 data-key="ch3_title"></h3>
+            <p data-key="ch3_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="ch4_title">Processi Non Standardizzati</h3>
-            <p data-key="ch4_text">Mancanza di procedure strutturate genera variabilità e problemi qualità.</p>
+            <h3 data-key="ch4_title"></h3>
+            <p data-key="ch4_text"></p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2 data-key="vision_title">La Nostra Visione</h2>
+    <h2 data-key="vision_title"></h2>
     <div class="grid">
         <div class="card">
-            <h3 data-key="v1_title">Continuità Operativa</h3>
-            <p data-key="v1_text">Stabilità e affidabilità nei processi produttivi.</p>
+            <h3 data-key="v1_title"></h3>
+            <p data-key="v1_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="v2_title">Eccellenza Strutturata</h3>
-            <p data-key="v2_text">Processi ottimizzati e standardizzati.</p>
+            <h3 data-key="v2_title"></h3>
+            <p data-key="v2_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="v3_title">Crescita Sostenibile</h3>
-            <p data-key="v3_text">Risultati misurabili e durevoli nel tempo.</p>
+            <h3 data-key="v3_title"></h3>
+            <p data-key="v3_text"></p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2 data-key="method_title">Metodologia Operativa</h2>
+    <h2 data-key="method_title"></h2>
     <div class="grid">
         <div class="card">
-            <h3 data-key="m1_title">1. Analisi Diagnostica</h3>
-            <p data-key="m1_text">Identificazione colli di bottiglia e opportunità.</p>
+            <h3 data-key="m1_title"></h3>
+            <p data-key="m1_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="m2_title">2. Progettazione Strutturata</h3>
-            <p data-key="m2_text">Soluzioni personalizzate con timeline e deliverables.</p>
+            <h3 data-key="m2_title"></h3>
+            <p data-key="m2_text"></p>
         </div>
 
         <div class="card">
-            <h3 data-key="m3_title">3. Implementazione</h3>
-            <p data-key="m3_text">Monitoraggio KPI e stabilizzazione dei risultati.</p>
+            <h3 data-key="m3_title"></h3>
+            <p data-key="m3_text"></p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2 data-key="services_title">Servizi Principali</h2>
+    <h2 data-key="services_title"></h2>
     <div class="grid">
-        <div class="card"><h3 data-key="s1">Ottimizzazione Processi</h3></div>
-        <div class="card"><h3 data-key="s2">Trasferimento Know‑How</h3></div>
-        <div class="card"><h3 data-key="s3">Standardizzazione Operativa</h3></div>
-        <div class="card"><h3 data-key="s4">Consulenza Strategica</h3></div>
-        <div class="card"><h3 data-key="s5">CAD & 3D Design</h3></div>
-        <div class="card"><h3 data-key="s6">Technical Governance</h3></div>
-        <div class="card"><h3 data-key="s7">Competency Stabilization</h3></div>
+        <div class="card"><h3 data-key="s1"></h3></div>
+        <div class="card"><h3 data-key="s2"></h3></div>
+        <div class="card"><h3 data-key="s3"></h3></div>
+        <div class="card"><h3 data-key="s4"></h3></div>
+        <div class="card"><h3 data-key="s5"></h3></div>
+        <div class="card"><h3 data-key="s6"></h3></div>
+        <div class="card"><h3 data-key="s7"></h3></div>
     </div>
 </section>
 
@@ -324,46 +319,28 @@
         <img src="qrcode.png" alt="QR Code Structured Engineering" style="width:180px; border:2px solid var(--gold); padding:10px; border-radius:10px;">
         <p style="margin-top:10px; color:var(--gold); font-size:14px;">Scan & Connect</p>
     </div>
-    <p>Email: <a href="mailto:strueng2026@proton.me" data-key="email">strueng2026@proton.me</a></p>
-    <p data-key="phone">Telefono: +39 389 78.70.017</p>
-    <p data-key="location">Sede: Italia</p>
+    <p data-key="email"></p>
+    <p data-key="phone"></p>
+    <p data-key="location"></p>
 </section>
 
 <section id="privacy">
-    <h2 data-key="privacy_title" style="color: var(--gold);">Privacy Policy</h2>
-    <p data-key="privacy_p1">
-        Structured Engineering S.R.L. non raccoglie dati personali degli utenti attraverso il presente sito.
-        Non utilizziamo cookie di profilazione, strumenti di tracciamento, analytics o servizi di terze parti.
-    </p>
-    <p data-key="privacy_p2">
-        Sono presenti esclusivamente cookie tecnici necessari al corretto funzionamento del sito.
-        Nessun dato viene ceduto a terzi.
-    </p>
-    <p data-key="privacy_p3">
-        Per informazioni o richieste: <a href="mailto:strueng2026@proton.me">strueng2026@proton.me</a>
-    </p>
+    <h2 data-key="privacy_title" style="color: var(--gold);"></h2>
+    <p data-key="privacy_p1"></p>
+    <p data-key="privacy_p2"></p>
+    <p data-key="privacy_p3"></p>
 </section>
 
 <section id="terms">
-    <h2 data-key="terms_title" style="color: var(--gold);">Termini &amp; Condizioni d'Uso</h2>
-    <p data-key="terms_p1">
-        Il presente sito ha finalità esclusivamente informative sulle attività di Structured Engineering S.R.L.
-        I contenuti non costituiscono offerta commerciale vincolante, né consulenza tecnica o legale personalizzata.
-    </p>
-    <p data-key="terms_p2">
-        Structured Engineering S.R.L. si riserva il diritto di modificare in qualsiasi momento i contenuti del sito.
-        L'uso del sito implica l'accettazione dei presenti Termini &amp; Condizioni.
-    </p>
-    <p data-key="terms_p3">
-        Per eventuali accordi contrattuali, condizioni specifiche o servizi professionali, fanno fede esclusivamente
-        i documenti sottoscritti tra le parti.
-    </p>
+    <h2 data-key="terms_title" style="color: var(--gold);"></h2>
+    <p data-key="terms_p1"></p>
+    <p data-key="terms_p2"></p>
+    <p data-key="terms_p3"></p>
 </section>
 
 <footer>
     Structured Engineering S.R.L. — Engineering Structure. Operational Continuity.
 </footer>
-
 <script src="lang.js"></script>
 
 <script>
@@ -391,7 +368,6 @@
         });
     });
 
-    // lingua iniziale IT
     applyLanguage('it');
 </script>
 
