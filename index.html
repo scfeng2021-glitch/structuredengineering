@@ -7,142 +7,161 @@
 <title>Structured Engineering S.R.L.</title>
 
 <style>
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
 
-    body {
-        padding-top: 140px;
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #0d0d0d;
-        color: #e0e0e0;
+/* ============================
+   BODY TRASPARENTE
+============================ */
 
-        /* ⭐ EFFETTO SCHERMO NERO + APPARIZIONE LENTA */
-        opacity: 0;
-        animation: fadeInSlow 2.4s ease forwards;
-    }
+body {
+    padding-top: 140px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: transparent; /* IMPORTANTE */
+    color: #e0e0e0;
+}
 
-    @keyframes fadeInSlow {
-        0%   { opacity: 0; }
-        40%  { opacity: 0; }   /* resta nero per un po’ */
-        100% { opacity: 1; }   /* appare lentamente */
-    }
+/* ============================
+   CONTENITORE CENTRALE NERO
+============================ */
+#main-wrapper {
+    background-color: #0d0d0d; /* il nero ora è qui */
+    min-height: 100%;
+    position: relative;
+    z-index: 10;
+}
 
-    h1, h2, h3 {
-        font-family: 'Cinzel', serif;
-        letter-spacing: 1px;
-    }
+/* ============================
+   FONT TITOLI
+============================ */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
 
-    section:first-of-type {
-        margin-top: 60px;
-    }
+section:first-of-type {
+    margin-top: 60px;
+}
 
-    :root {
-        --gold: #c6a667;
-        --dark: #0d0d0d;
-        --gray: #1a1a1a;
-        --light-gray: #d0d0d0;
-    }
+:root {
+    --gold: #c6a667;
+    --dark: #0d0d0d;
+    --gray: #1a1a1a;
+    --light-gray: #d0d0d0;
+}
 
-    header {
-        background: linear-gradient(180deg, #000000, #1a1a1a);
-        padding: 40px 20px;
-        border-bottom: 2px solid var(--gold);
-    }
+/* ============================
+   HEADER
+============================ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(180deg, #000000, #1a1a1a);
+    padding: 40px 20px;
+    border-bottom: 2px solid var(--gold);
+}
 
-    header .container {
-        max-width: 1100px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+header .container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    header h1 {
-        font-size: 42px;
-        color: var(--gold);
-        margin-bottom: 10px;
-        letter-spacing: 2px;
-    }
+header h1 {
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
 
-    header p {
-        font-size: 18px;
-        opacity: 0.85;
-    }
+header p {
+    font-size: 18px;
+    opacity: 0.85;
+}
 
-    .lang-switcher span {
-        cursor: pointer;
-        color: var(--gold);
-        font-weight: bold;
-        margin-left: 10px;
-    }
+.lang-switcher span {
+    cursor: pointer;
+    color: var(--gold);
+    font-weight: bold;
+    margin-left: 10px;
+}
 
-    .lang-switcher span:hover {
-        opacity: 0.6;
-    }
+.lang-switcher span:hover {
+    opacity: 0.6;
+}
 
-    section {
-        max-width: 1100px;
-        margin: auto;
-        padding: 50px 20px;
-        border-bottom: 1px solid #222;
-    }
+/* ============================
+   SEZIONI
+============================ */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    border-bottom: 1px solid #222;
+}
 
-    h2 {
-        color: var(--gold);
-        font-size: 28px;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-    }
+h2 {
+    color: var(--gold);
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
 
-    h3 {
-        color: var(--gold);
-        margin-top: 30px;
-    }
+h3 {
+    color: var(--gold);
+    margin-top: 30px;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-top: 20px;
-    }
+/* ============================
+   GRID + CARD
+============================ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
 
-    .card {
-        background: #111;
-        padding: 25px;
-        border: 1px solid #222;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+.card {
+    background: #111;
+    padding: 25px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-    .card:hover {
-        border-color: var(--gold);
-        transition: 0.3s;
-    }
+.card:hover {
+    border-color: var(--gold);
+    transition: 0.3s;
+}
 
-    footer {
-        text-align: center;
-        padding: 40px;
-        background: #000;
-        border-top: 2px solid var(--gold);
-        color: #e0e0e0;
-    }
+/* ============================
+   FOOTER
+============================ */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    border-top: 2px solid var(--gold);
+    color: #e0e0e0;
+}
 
-    a {
-        color: var(--gold);
-        text-decoration: none;
-    }
+a {
+    color: var(--gold);
+    text-decoration: none;
+}
 
-    a:hover {
-        opacity: 0.7;
-    }
+a:hover {
+    opacity: 0.7;
+}
 
-/* PATTERN TECNICO LATERALE — VERSIONE FUNZIONANTE */
+/* ============================
+   PATTERN LATERALE FUNZIONANTE
+============================ */
 .side-pattern {
     position: fixed;
     top: 0;
@@ -155,14 +174,16 @@
         transparent 1px,
         transparent 10px
     );
-    z-index: 50; /* sopra lo sfondo, sotto tutto il resto */
+    z-index: 1; /* dietro al contenuto */
     pointer-events: none;
 }
 
 #pattern-left { left: 0; }
 #pattern-right { right: 0; }
 
-/* TESTO VERTICALE CORPORATE — VERSIONE FUNZIONANTE */
+/* ============================
+   TESTO VERTICALE FUNZIONANTE
+============================ */
 .side-text {
     position: fixed;
     top: 50%;
@@ -170,8 +191,8 @@
     font-size: 12px;
     letter-spacing: 3px;
     color: var(--gold);
-    opacity: 0.45; /* leggermente più visibile */
-    z-index: 60; /* sopra il pattern */
+    opacity: 0.45;
+    z-index: 2;
     font-weight: bold;
     pointer-events: none;
 }
@@ -252,18 +273,24 @@
     }
 </style>
 </head>
+
 <body>
 
-<div id="pattern-left" class="side-pattern"></div>
-<div id="pattern-right" class="side-pattern"></div>
+<div id="main-wrapper">
 
-<div id="text-left" class="side-text">ENGINEERING STRUCTURE — OPERATIONAL CONTINUITY</div>
-<div id="text-right" class="side-text">STRUCTURED • RELIABLE • CONTINUOUS</div>
+    <!-- PATTERN LATERALI -->
+    <div id="pattern-left" class="side-pattern"></div>
+    <div id="pattern-right" class="side-pattern"></div>
 
-<div id="cookie-banner">
-    <span id="cookie-text" data-key="cookie_banner_text"></span>
-    <button id="cookie-ok-btn" data-key="cookie_banner_ok"></button>
-</div>
+    <!-- TESTO VERTICALE -->
+    <div id="text-left" class="side-text">ENGINEERING STRUCTURE — OPERATIONAL CONTINUITY</div>
+    <div id="text-right" class="side-text">STRUCTURED • RELIABLE • CONTINUOUS</div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner">
+        <span id="cookie-text" data-key="cookie_banner_text"></span>
+        <button id="cookie-ok-btn" data-key="cookie_banner_ok"></button>
+    </div>
 
 <header>
     <div class="container">
