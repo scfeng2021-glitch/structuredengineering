@@ -41,6 +41,35 @@ const translations = {
         s6: "Technical Governance",
         s7: "Competency Stabilization",
 
+        // DETTAGLI SERVIZI (pannelli)
+        s1_d1: "Riduzione sprechi, tempi morti e variabilità.",
+        s1_d2: "Interventi mirati con KPI chiari e misurabili.",
+        s1_d3: "Vuoi capire dove si nascondono i tuoi margini? Scrivimi.",
+
+        s2_d1: "Documentiamo, standardizziamo e trasferiamo competenze critiche.",
+        s2_d2: "Eliminiamo dipendenze da singoli operatori.",
+        s2_d3: "Vuoi stabilizzare il tuo reparto? Parliamone.",
+
+        s3_d1: "Procedure chiare, replicabili, senza variabilità.",
+        s3_d2: "Riduzione errori e aumento qualità.",
+        s3_d3: "Vuoi processi più stabili? Ti aiuto.",
+
+        s4_d1: "Analisi strutturata, roadmap, priorità operative.",
+        s4_d2: "Decisioni basate su dati, non su intuizioni.",
+        s4_d3: "Vuoi una visione chiara? Possiamo costruirla.",
+
+        s5_d1: "Modelli tecnici, componenti, revisioni, ottimizzazioni.",
+        s5_d2: "Supporto diretto a progettisti e officine.",
+        s5_d3: "Hai un componente da migliorare? Mandamelo.",
+
+        s6_d1: "Gestione tecnica, processi, responsabilità, continuità.",
+        s6_d2: "Riduzione caos operativo e aumento controllo.",
+        s6_d3: "Vuoi una struttura più solida? Ci siamo.",
+
+        s7_d1: "Stabilizziamo ruoli, mansioni e competenze chiave.",
+        s7_d2: "Riduciamo turnover tecnico e vulnerabilità.",
+        s7_d3: "Vuoi un reparto che non si ferma mai? Scrivimi.",
+
         contacts_title: "Contatti",
         email: "strueng2026@proton.me",
         phone: "Telefono: +39 389 78.70.017",
@@ -104,6 +133,35 @@ const translations = {
         s6: "Technical Governance",
         s7: "Competency Stabilization",
 
+        // SERVICE DETAILS (panels)
+        s1_d1: "Reduction of waste, downtime and variability.",
+        s1_d2: "Targeted interventions with clear and measurable KPIs.",
+        s1_d3: "Want to discover your hidden margins? Contact me.",
+
+        s2_d1: "We document, standardize and transfer critical know‑how.",
+        s2_d2: "We eliminate dependency on single operators.",
+        s2_d3: "Want to stabilize your department? Let's talk.",
+
+        s3_d1: "Clear, repeatable and stable procedures.",
+        s3_d2: "Reduced errors and improved quality.",
+        s3_d3: "Want more stable processes? I can help.",
+
+        s4_d1: "Structured analysis, roadmap and operational priorities.",
+        s4_d2: "Decisions based on data, not intuition.",
+        s4_d3: "Need a clear vision? We can build it.",
+
+        s5_d1: "Technical models, components, revisions and optimizations.",
+        s5_d2: "Direct support for designers and workshops.",
+        s5_d3: "Need to improve a component? Send it to me.",
+
+        s6_d1: "Technical governance, processes, responsibilities and continuity.",
+        s6_d2: "Reduced operational chaos and increased control.",
+        s6_d3: "Want a stronger structure? We're here.",
+
+        s7_d1: "We stabilize roles, tasks and critical competencies.",
+        s7_d2: "We reduce technical turnover and vulnerability.",
+        s7_d3: "Want a department that never stops? Contact me.",
+
         contacts_title: "Contact",
         email: "strueng2026@proton.me",
         phone: "Phone: +39 389 78.70.017",
@@ -166,6 +224,35 @@ const translations = {
         s5: "CAD & Design 3D",
         s6: "Guvernanță Tehnică",
         s7: "Stabilizarea Competențelor",
+
+        // DETALII SERVICII (panouri)
+        s1_d1: "Reducerea risipei, a timpilor morți și a variabilității.",
+        s1_d2: "Intervenții țintite cu KPI clari și măsurabili.",
+        s1_d3: "Vrei să afli unde sunt marjele ascunse? Scrie-mi.",
+
+        s2_d1: "Documentăm, standardizăm și transferăm competențe critice.",
+        s2_d2: "Eliminăm dependența de un singur operator.",
+        s2_d3: "Vrei să stabilizezi departamentul? Hai să vorbim.",
+
+        s3_d1: "Proceduri clare, repetabile și stabile.",
+        s3_d2: "Reducerea erorilor și creșterea calității.",
+        s3_d3: "Vrei procese mai stabile? Te pot ajuta.",
+
+        s4_d1: "Analiză structurată, roadmap și priorități operaționale.",
+        s4_d2: "Decizii bazate pe date, nu pe intuiție.",
+        s4_d3: "Ai nevoie de o viziune clară? O putem construi.",
+
+        s5_d1: "Modele tehnice, componente, revizii și optimizări.",
+        s5_d2: "Suport direct pentru proiectanți și ateliere.",
+        s5_d3: "Ai un component de îmbunătățit? Trimite-l.",
+
+        s6_d1: "Guvernanță tehnică, procese, responsabilități și continuitate.",
+        s6_d2: "Reducerea haosului operațional și creșterea controlului.",
+        s6_d3: "Vrei o structură mai solidă? Suntem aici.",
+
+        s7_d1: "Stabilizăm roluri, sarcini și competențe critice.",
+        s7_d2: "Reducem turnover-ul tehnic și vulnerabilitatea.",
+        s7_d3: "Vrei un departament care nu se oprește niciodată? Scrie-mi.",
 
         contacts_title: "Contact",
         email: "strueng2026@proton.me",
