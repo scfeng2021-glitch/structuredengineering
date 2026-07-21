@@ -125,9 +125,7 @@
         opacity: 0.7;
     }
 
-    /* ----------------------------- */
-    /* PATTERN TECNICO LATERALE      */
-    /* ----------------------------- */
+    /* PATTERN TECNICO LATERALE */
     .side-pattern {
         position: fixed;
         top: 0;
@@ -143,17 +141,10 @@
         z-index: 997;
     }
 
-    #pattern-left {
-        left: 0;
-    }
+    #pattern-left { left: 0; }
+    #pattern-right { right: 0; }
 
-    #pattern-right {
-        right: 0;
-    }
-
-    /* ----------------------------- */
-    /* TESTO VERTICALE CORPORATE     */
-    /* ----------------------------- */
+    /* TESTO VERTICALE CORPORATE */
     .side-text {
         position: fixed;
         top: 50%;
@@ -166,17 +157,10 @@
         font-weight: bold;
     }
 
-    #text-left {
-        left: -120px;
-    }
+    #text-left { left: -120px; }
+    #text-right { right: -120px; }
 
-    #text-right {
-        right: -120px;
-    }
-
-    /* ----------------------------- */
-    /* GDPR COOKIE BANNER            */
-    /* ----------------------------- */
+    /* GDPR COOKIE BANNER */
     #cookie-banner {
         position: fixed;
         bottom: 0;
@@ -188,9 +172,16 @@
         color: #e0e0e0;
         font-size: 14px;
         display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
         justify-content: space-between;
         align-items: center;
         z-index: 9999;
+    }
+
+    #cookie-banner span {
+        max-width: 80%;
+        line-height: 1.4;
     }
 
     #cookie-banner button {
@@ -201,6 +192,7 @@
         font-weight: bold;
         cursor: pointer;
         border-radius: 4px;
+        flex-shrink: 0;
     }
 
     #cookie-banner button:hover {
@@ -221,11 +213,7 @@
 
 <!-- BANNER COOKIE / GDPR -->
 <div id="cookie-banner">
-    <span id="cookie-text">
-        Questo sito non utilizza cookie di profilazione. Sono presenti solo cookie tecnici necessari al funzionamento.
-        <a href="#privacy" style="color: var(--gold);">Privacy Policy</a> ·
-        <a href="#terms" style="color: var(--gold);">Termini &amp; Condizioni</a>
-    </span>
+    <span id="cookie-text"></span>
     <button onclick="document.getElementById('cookie-banner').style.display='none'">OK</button>
 </div>
 
@@ -343,7 +331,6 @@
     <p data-key="location">Sede: Italia</p>
 </section>
 
-<!-- PRIVACY POLICY -->
 <section id="privacy">
     <h2 style="color: var(--gold);">Privacy Policy</h2>
     <p>
@@ -359,7 +346,6 @@
     </p>
 </section>
 
-<!-- TERMINI & CONDIZIONI -->
 <section id="terms">
     <h2 style="color: var(--gold);">Termini &amp; Condizioni d'Uso</h2>
     <p>
@@ -402,9 +388,7 @@
         btn.addEventListener('click', () => {
             const lang = btn.getAttribute('data-lang');
             applyLanguage(lang);
-            if (cookieTexts[lang]) {
-                cookieTextSpan.innerHTML = cookieTexts[lang];
-            }
+            cookieTextSpan.innerHTML = cookieTexts[lang];
         });
     });
 
@@ -414,7 +398,6 @@
         });
     }
 
-    // Imposta testo banner iniziale in italiano
     cookieTextSpan.innerHTML = cookieTexts.it;
 </script>
 
