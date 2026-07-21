@@ -173,6 +173,39 @@
     #text-right {
         right: -120px;
     }
+
+    /* ----------------------------- */
+    /* GDPR COOKIE BANNER            */
+    /* ----------------------------- */
+    #cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        border-top: 2px solid var(--gold);
+        padding: 15px 20px;
+        color: #e0e0e0;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    #cookie-banner button {
+        background: var(--gold);
+        color: #000;
+        border: none;
+        padding: 8px 15px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    #cookie-banner button:hover {
+        opacity: 0.8;
+    }
 </style>
 
 </head>
@@ -185,6 +218,16 @@
 
 <div id="text-left" class="side-text">ENGINEERING STRUCTURE — OPERATIONAL CONTINUITY</div>
 <div id="text-right" class="side-text">STRUCTURED • RELIABLE • CONTINUOUS</div>
+
+<!-- BANNER COOKIE / GDPR -->
+<div id="cookie-banner">
+    <span id="cookie-text">
+        Questo sito non utilizza cookie di profilazione. Sono presenti solo cookie tecnici necessari al funzionamento.
+        <a href="#privacy" style="color: var(--gold);">Privacy Policy</a> ·
+        <a href="#terms" style="color: var(--gold);">Termini &amp; Condizioni</a>
+    </span>
+    <button onclick="document.getElementById('cookie-banner').style.display='none'">OK</button>
+</div>
 
 <header>
     <div class="container">
@@ -300,6 +343,39 @@
     <p data-key="location">Sede: Italia</p>
 </section>
 
+<!-- PRIVACY POLICY -->
+<section id="privacy">
+    <h2 style="color: var(--gold);">Privacy Policy</h2>
+    <p>
+        Structured Engineering S.R.L. non raccoglie dati personali degli utenti attraverso il presente sito.
+        Non utilizziamo cookie di profilazione, strumenti di tracciamento, analytics o servizi di terze parti.
+    </p>
+    <p>
+        Sono presenti esclusivamente cookie tecnici necessari al corretto funzionamento del sito.
+        Nessun dato viene ceduto a terzi.
+    </p>
+    <p>
+        Per informazioni o richieste: <a href="mailto:strueng2026@proton.me">strueng2026@proton.me</a>
+    </p>
+</section>
+
+<!-- TERMINI & CONDIZIONI -->
+<section id="terms">
+    <h2 style="color: var(--gold);">Termini &amp; Condizioni d'Uso</h2>
+    <p>
+        Il presente sito ha finalità esclusivamente informative sulle attività di Structured Engineering S.R.L.
+        I contenuti non costituiscono offerta commerciale vincolante, né consulenza tecnica o legale personalizzata.
+    </p>
+    <p>
+        Structured Engineering S.R.L. si riserva il diritto di modificare in qualsiasi momento i contenuti del sito.
+        L'uso del sito implica l'accettazione dei presenti Termini &amp; Condizioni.
+    </p>
+    <p>
+        Per eventuali accordi contrattuali, condizioni specifiche o servizi professionali, fanno fede esclusivamente
+        i documenti sottoscritti tra le parti.
+    </p>
+</section>
+
 <footer>
     Structured Engineering S.R.L. — Engineering Structure. Operational Continuity.
 </footer>
@@ -308,11 +384,27 @@
 
 <script>
     const langButtons = document.querySelectorAll('.lang-btn');
+    const cookieTextSpan = document.getElementById('cookie-text');
+
+    const cookieTexts = {
+        it: 'Questo sito non utilizza cookie di profilazione. Sono presenti solo cookie tecnici necessari al funzionamento. ' +
+            '<a href="#privacy" style="color: var(--gold);">Privacy Policy</a> · ' +
+            '<a href="#terms" style="color: var(--gold);">Termini &amp; Condizioni</a>',
+        en: 'This website does not use profiling cookies. Only technical cookies necessary for proper functioning are present. ' +
+            '<a href="#privacy" style="color: var(--gold);">Privacy Policy</a> · ' +
+            '<a href="#terms" style="color: var(--gold);">Terms &amp; Conditions</a>',
+        ro: 'Acest site nu utilizează cookie-uri de profilare. Sunt prezente doar cookie-uri tehnice necesare funcționării corecte. ' +
+            '<a href="#privacy" style="color: var(--gold);">Politica de Confidențialitate</a> · ' +
+            '<a href="#terms" style="color: var(--gold);">Termeni &amp; Condiții</a>'
+    };
 
     langButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.getAttribute('data-lang');
             applyLanguage(lang);
+            if (cookieTexts[lang]) {
+                cookieTextSpan.innerHTML = cookieTexts[lang];
+            }
         });
     });
 
@@ -321,6 +413,9 @@
             el.innerHTML = translations[lang][el.getAttribute('data-key')];
         });
     }
+
+    // Imposta testo banner iniziale in italiano
+    cookieTextSpan.innerHTML = cookieTexts.it;
 </script>
 
 </body>
