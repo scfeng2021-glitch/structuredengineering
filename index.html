@@ -288,7 +288,7 @@ a:hover {
 // Avvio musica dopo primo click (autoplay sbloccato)
 function startMusic() {
     const audio = document.getElementById("bg-music");
-    audio.volume = 0.15;
+    audio.volume = 0.80;
     audio.play().catch(() => {});
 }
 document.addEventListener("click", startMusic, { once: true });
