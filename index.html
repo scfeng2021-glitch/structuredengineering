@@ -172,15 +172,13 @@
         color: #e0e0e0;
         font-size: 14px;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;      /* SEMPRE colonna: pulsante sotto, mai fuori */
         gap: 10px;
-        justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         z-index: 9999;
     }
 
     #cookie-banner span {
-        max-width: 80%;
         line-height: 1.4;
     }
 
@@ -192,25 +190,11 @@
         font-weight: bold;
         cursor: pointer;
         border-radius: 4px;
-        flex-shrink: 0;
+        align-self: flex-end;        /* pulsante allineato a destra ma dentro il banner */
     }
 
     #cookie-banner button:hover {
         opacity: 0.8;
-    }
-
-    /* MOBILE FIX: pulsante sempre visibile */
-    @media (max-width: 600px) {
-        #cookie-banner {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        #cookie-banner span {
-            max-width: 100%;
-        }
-        #cookie-banner button {
-            align-self: flex-end;
-        }
     }
 </style>
 
@@ -227,8 +211,8 @@
 
 <!-- BANNER COOKIE / GDPR -->
 <div id="cookie-banner">
-    <span id="cookie-text"></span>
-    <button onclick="document.getElementById('cookie-banner').style.display='none'">OK</button>
+    <span id="cookie-text" data-key="cookie_banner_text"></span>
+    <button id="cookie-ok-btn" data-key="cookie_banner_ok">OK</button>
 </div>
 
 <header>
@@ -334,6 +318,7 @@
         <div class="card"><h3 data-key="s7">Competency Stabilization</h3></div>
     </div>
 </section>
+
 <section>
     <div style="margin-top:30px; text-align:center;">
         <img src="qrcode.png" alt="QR Code Structured Engineering" style="width:180px; border:2px solid var(--gold); padding:10px; border-radius:10px;">
@@ -345,31 +330,31 @@
 </section>
 
 <section id="privacy">
-    <h2 style="color: var(--gold);">Privacy Policy</h2>
-    <p>
+    <h2 data-key="privacy_title" style="color: var(--gold);">Privacy Policy</h2>
+    <p data-key="privacy_p1">
         Structured Engineering S.R.L. non raccoglie dati personali degli utenti attraverso il presente sito.
         Non utilizziamo cookie di profilazione, strumenti di tracciamento, analytics o servizi di terze parti.
     </p>
-    <p>
+    <p data-key="privacy_p2">
         Sono presenti esclusivamente cookie tecnici necessari al corretto funzionamento del sito.
         Nessun dato viene ceduto a terzi.
     </p>
-    <p>
+    <p data-key="privacy_p3">
         Per informazioni o richieste: <a href="mailto:strueng2026@proton.me">strueng2026@proton.me</a>
     </p>
 </section>
 
 <section id="terms">
-    <h2 style="color: var(--gold);">Termini &amp; Condizioni d'Uso</h2>
-    <p>
+    <h2 data-key="terms_title" style="color: var(--gold);">Termini &amp; Condizioni d'Uso</h2>
+    <p data-key="terms_p1">
         Il presente sito ha finalità esclusivamente informative sulle attività di Structured Engineering S.R.L.
         I contenuti non costituiscono offerta commerciale vincolante, né consulenza tecnica o legale personalizzata.
     </p>
-    <p>
+    <p data-key="terms_p2">
         Structured Engineering S.R.L. si riserva il diritto di modificare in qualsiasi momento i contenuti del sito.
         L'uso del sito implica l'accettazione dei presenti Termini &amp; Condizioni.
     </p>
-    <p>
+    <p data-key="terms_p3">
         Per eventuali accordi contrattuali, condizioni specifiche o servizi professionali, fanno fede esclusivamente
         i documenti sottoscritti tra le parti.
     </p>
@@ -383,33 +368,11 @@
 
 <script>
     const langButtons = document.querySelectorAll('.lang-btn');
-    const cookieTextSpan = document.getElementById('cookie-text');
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieOkBtn = document.getElementById('cookie-ok-btn');
 
-    const cookieTexts = {
-        it: 'Questo sito non utilizza cookie di profilazione. Sono presenti solo cookie tecnici necessari al funzionamento. ' +
-            '<a href="#privacy" style="color: var(--gold);">Privacy Policy</a> · ' +
-            '<a href="#terms" style="color: var(--gold);">Termini &amp; Condizioni</a>',
-        en: 'This website does not use profiling cookies. Only technical cookies necessary for proper functioning are present. ' +
-            '<a href="#privacy" style="color: var(--gold);">Privacy Policy</a> · ' +
-            '<a href="#terms" style="color: var(--gold);">Terms &amp; Conditions</a>',
-        ro: 'Acest site nu utilizează cookie-uri de profilare. Sunt prezente doar cookie-uri tehnice necesare funcționării corecte. ' +
-            '<a href="#privacy" style="color: var(--gold);">Politica de Confidențialitate</a> · ' +
-            '<a href="#terms" style="color: var(--gold);">Termeni &amp; Condiții</a>'
-    };
-
-    // Imposta testo iniziale in IT
-    cookieTextSpan.innerHTML = cookieTexts.it;
-
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
-            applyLanguage(lang);
-
-            // Aggiorna anche il banner GDPR
-            if (cookieTexts[lang]) {
-                cookieTextSpan.innerHTML = cookieTexts[lang];
-            }
-        });
+    cookieOkBtn.addEventListener('click', () => {
+        cookieBanner.style.display = 'none';
     });
 
     function applyLanguage(lang) {
@@ -420,6 +383,16 @@
             }
         });
     }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            applyLanguage(lang);
+        });
+    });
+
+    // lingua iniziale IT
+    applyLanguage('it');
 </script>
 
 </body>
