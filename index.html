@@ -198,6 +198,20 @@
     #cookie-banner button:hover {
         opacity: 0.8;
     }
+
+    /* MOBILE FIX: pulsante sempre visibile */
+    @media (max-width: 600px) {
+        #cookie-banner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #cookie-banner span {
+            max-width: 100%;
+        }
+        #cookie-banner button {
+            align-self: flex-end;
+        }
+    }
 </style>
 
 </head>
@@ -320,7 +334,6 @@
         <div class="card"><h3 data-key="s7">Competency Stabilization</h3></div>
     </div>
 </section>
-
 <section>
     <div style="margin-top:30px; text-align:center;">
         <img src="qrcode.png" alt="QR Code Structured Engineering" style="width:180px; border:2px solid var(--gold); padding:10px; border-radius:10px;">
@@ -384,21 +397,29 @@
             '<a href="#terms" style="color: var(--gold);">Termeni &amp; Condiții</a>'
     };
 
+    // Imposta testo iniziale in IT
+    cookieTextSpan.innerHTML = cookieTexts.it;
+
     langButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.getAttribute('data-lang');
             applyLanguage(lang);
-            cookieTextSpan.innerHTML = cookieTexts[lang];
+
+            // Aggiorna anche il banner GDPR
+            if (cookieTexts[lang]) {
+                cookieTextSpan.innerHTML = cookieTexts[lang];
+            }
         });
     });
 
     function applyLanguage(lang) {
         document.querySelectorAll('[data-key]').forEach(el => {
-            el.innerHTML = translations[lang][el.getAttribute('data-key')];
+            const key = el.getAttribute('data-key');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
         });
     }
-
-    cookieTextSpan.innerHTML = cookieTexts.it;
 </script>
 
 </body>
