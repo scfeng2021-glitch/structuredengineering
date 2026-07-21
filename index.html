@@ -380,7 +380,8 @@
     </div>
 </section>
 
-        <section id="contacts">
+<!-- CONTATTI + QR CODE -->
+<section id="contacts">
     <h2 data-key="contacts_title"></h2>
 
     <div style="margin-top:30px; text-align:center;">
@@ -389,11 +390,16 @@
         <p style="margin-top:10px; color:var(--gold); font-size:14px;">Scan & Connect</p>
     </div>
 
-    <p><strong>Email:</strong> <span data-key="email"></span></p>
+    <p><strong>Email:</strong> 
+        <a id="email-link" href="#" style="color: var(--gold);">
+            <span data-key="email"></span>
+        </a>
+    </p>
+
     <p><strong data-key="phone"></strong></p>
     <p><strong data-key="location"></strong></p>
 </section>
-    
+
 <section id="privacy">
     <h2 data-key="privacy_title" style="color: var(--gold);"></h2>
     <p data-key="privacy_p1"></p>
@@ -422,6 +428,12 @@
         cookieBanner.style.display = 'none';
     });
 
+    function updateEmailLink(lang) {
+        const subject = translations[lang].email_subject;
+        document.getElementById("email-link").href =
+            "mailto:strueng2026@proton.me?subject=" + encodeURIComponent(subject);
+    }
+
     function applyLanguage(lang) {
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
@@ -429,6 +441,8 @@
                 el.innerHTML = translations[lang][key];
             }
         });
+
+        updateEmailLink(lang);
     }
 
     langButtons.forEach(btn => {
