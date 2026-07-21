@@ -7,14 +7,29 @@
 <title>Structured Engineering S.R.L.</title>
 
 <style>
+    /* ============================
+       HEADER + LOGO FADE-IN PREMIUM
+       ============================ */
     header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 999;
+
+        opacity: 0;
+        animation: headerFade 2.8s ease forwards;
+        animation-delay: 0.6s;
     }
 
+    @keyframes headerFade {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    /* ============================
+       SITO: SCHERMO NERO + APPARIZIONE LENTA
+       ============================ */
     body {
         padding-top: 140px;
         margin: 0;
@@ -22,7 +37,6 @@
         background-color: #0d0d0d;
         color: #e0e0e0;
 
-        /* ⭐ EFFETTO SCHERMO NERO + APPARIZIONE LENTA */
         opacity: 0;
         animation: fadeInSlow 2.4s ease forwards;
     }
@@ -33,6 +47,9 @@
         100% { opacity: 1; }   /* appare lentamente */
     }
 
+    /* ============================
+       FONT TITOLI
+       ============================ */
     h1, h2, h3 {
         font-family: 'Cinzel', serif;
         letter-spacing: 1px;
@@ -105,6 +122,35 @@
         margin-top: 30px;
     }
 
+    /* ============================
+       TITOLO PRINCIPALE: MICRO-GLOW ORO
+       ============================ */
+    h2[data-key="intro_title"] {
+        opacity: 0;
+        animation: titleGlow 2.2s ease forwards;
+        animation-delay: 1.4s;
+    }
+
+    @keyframes titleGlow {
+        0%   { opacity: 0; text-shadow: 0 0 0px var(--gold); }
+        40%  { opacity: 1; text-shadow: 0 0 12px rgba(198,166,103,0.35); }
+        100% { opacity: 1; text-shadow: 0 0 0px transparent; }
+    }
+
+    /* ============================
+       CARD: APPARIZIONE DOPO IL TITOLO
+       ============================ */
+    .grid .card {
+        opacity: 0;
+        animation: cardFade 1.6s ease forwards;
+        animation-delay: 2.2s;
+    }
+
+    @keyframes cardFade {
+        0%   { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -141,114 +187,8 @@
     a:hover {
         opacity: 0.7;
     }
-
-    /* PATTERN TECNICO LATERALE */
-    .side-pattern {
-        position: fixed;
-        top: 0;
-        width: 60px;
-        height: 100vh;
-        background-image: repeating-linear-gradient(
-            to bottom,
-            rgba(198, 166, 103, 0.08) 0px,
-            rgba(198, 166, 103, 0.08) 1px,
-            transparent 1px,
-            transparent 8px
-        );
-        z-index: 997;
-    }
-
-    #pattern-left { left: 0; }
-    #pattern-right { right: 0; }
-
-    /* TESTO VERTICALE CORPORATE */
-    .side-text {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%) rotate(-90deg);
-        font-size: 12px;
-        letter-spacing: 3px;
-        color: var(--gold);
-        opacity: 0.35;
-        z-index: 998;
-        font-weight: bold;
-    }
-
-    #text-left { left: -120px; }
-    #text-right { right: -120px; }
-
-    /* GDPR COOKIE BANNER */
-    #cookie-banner {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: calc(100% - 20px);
-        background: #111;
-        border-top: 2px solid var(--gold);
-        padding: 15px 10px;
-        color: #e0e0e0;
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        z-index: 9999;
-        box-sizing: border-box;
-    }
-
-    #cookie-banner span {
-        line-height: 1.4;
-    }
-
-    #cookie-banner button {
-        background: var(--gold);
-        color: #000;
-        border: none;
-        padding: 8px 15px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 4px;
-        align-self: flex-end;
-        max-width: 100%;
-    }
-
-    #cookie-banner button:hover {
-        opacity: 0.8;
-    }
-
-    /* CARD DETAILS PANEL */
-    .card-details {
-        display: none;
-        background: #0f0f0f;
-        border: 1px solid var(--gold);
-        padding: 20px;
-        margin-top: 15px;
-        border-radius: 8px;
-        animation: fadeIn 0.3s ease;
-    }
-
-    .card-details p {
-        margin: 8px 0;
-        line-height: 1.5;
-    }
-
-    .card-details .close-btn {
-        float: right;
-        cursor: pointer;
-        color: var(--gold);
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .card-details .close-btn:hover {
-        opacity: 0.6;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(5px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
 </style>
+
 </head>
 <body>
 
