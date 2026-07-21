@@ -1,5 +1,8 @@
 const translations = {
 
+    /* ============================================================
+       ITALIANO
+    ============================================================ */
     it: {
         title: "STRUCTURED ENGINEERING S.R.L.",
         subtitle: "Engineering Structure. Operational Continuity.",
@@ -41,7 +44,7 @@ const translations = {
         s6: "Technical Governance",
         s7: "Competency Stabilization",
 
-        // DETTAGLI SERVIZI (pannelli)
+        /* DETTAGLI SERVIZI */
         s1_d1: "Riduzione sprechi, tempi morti e variabilità.",
         s1_d2: "Interventi mirati con KPI chiari e misurabili.",
         s1_d3: "Vuoi capire dove si nascondono i tuoi margini? Scrivimi.",
@@ -70,28 +73,35 @@ const translations = {
         s7_d2: "Riduciamo turnover tecnico e vulnerabilità.",
         s7_d3: "Vuoi un reparto che non si ferma mai? Scrivimi.",
 
+        /* CONTATTI */
         contacts_title: "Contatti",
         email: "strueng2026@proton.me",
         phone: "Telefono: +39 389 78.70.017",
         location: "Sede: Italia",
 
+        /* EMAIL MULTILINGUA */
+        email_subject: "Structured Engineering — Richiesta Informazioni",
+
         /* GDPR Banner */
         cookie_banner_text: "Questo sito non utilizza cookie di profilazione. Sono presenti solo cookie tecnici necessari al funzionamento. <a href='#privacy' style='color: var(--gold);'>Privacy Policy</a> · <a href='#terms' style='color: var(--gold);'>Termini &amp; Condizioni</a>",
         cookie_banner_ok: "OK",
 
-        /* Privacy Policy */
+        /* Privacy */
         privacy_title: "Privacy Policy",
         privacy_p1: "Structured Engineering S.R.L. non raccoglie dati personali degli utenti attraverso il presente sito. Non utilizziamo cookie di profilazione, strumenti di tracciamento, analytics o servizi di terze parti.",
         privacy_p2: "Sono presenti esclusivamente cookie tecnici necessari al corretto funzionamento del sito. Nessun dato viene ceduto a terzi.",
         privacy_p3: "Per informazioni o richieste: <a href='mailto:strueng2026@proton.me'>strueng2026@proton.me</a>",
 
-        /* Termini & Condizioni */
+        /* Termini */
         terms_title: "Termini & Condizioni d'Uso",
         terms_p1: "Il presente sito ha finalità esclusivamente informative sulle attività di Structured Engineering S.R.L. I contenuti non costituiscono offerta commerciale vincolante, né consulenza tecnica o legale personalizzata.",
         terms_p2: "Structured Engineering S.R.L. si riserva il diritto di modificare in qualsiasi momento i contenuti del sito. L'uso del sito implica l'accettazione dei presenti Termini & Condizioni.",
         terms_p3: "Per eventuali accordi contrattuali, condizioni specifiche o servizi professionali, fanno fede esclusivamente i documenti sottoscritti tra le parti."
     },
 
+    /* ============================================================
+       INGLESE
+    ============================================================ */
     en: {
         title: "STRUCTURED ENGINEERING S.R.L.",
         subtitle: "Engineering Structure. Operational Continuity.",
@@ -133,7 +143,7 @@ const translations = {
         s6: "Technical Governance",
         s7: "Competency Stabilization",
 
-        // SERVICE DETAILS (panels)
+        /* SERVICE DETAILS */
         s1_d1: "Reduction of waste, downtime and variability.",
         s1_d2: "Targeted interventions with clear and measurable KPIs.",
         s1_d3: "Want to discover your hidden margins? Contact me.",
@@ -162,28 +172,35 @@ const translations = {
         s7_d2: "We reduce technical turnover and vulnerability.",
         s7_d3: "Want a department that never stops? Contact me.",
 
+        /* CONTACTS */
         contacts_title: "Contact",
         email: "strueng2026@proton.me",
         phone: "Phone: +39 389 78.70.017",
         location: "Location: Italy",
 
+        /* EMAIL MULTILINGUA */
+        email_subject: "Structured Engineering — Information Request",
+
         /* GDPR Banner */
         cookie_banner_text: "This website does not use profiling cookies. Only technical cookies necessary for proper functioning are present. <a href='#privacy' style='color: var(--gold);'>Privacy Policy</a> · <a href='#terms' style='color: var(--gold);'>Terms &amp; Conditions</a>",
         cookie_banner_ok: "OK",
 
-        /* Privacy Policy */
+        /* Privacy */
         privacy_title: "Privacy Policy",
         privacy_p1: "Structured Engineering S.R.L. does not collect personal data from users through this website. We do not use profiling cookies, tracking tools, analytics, or third‑party services.",
         privacy_p2: "Only technical cookies necessary for the proper functioning of the website are present. No data is shared with third parties.",
         privacy_p3: "For information or requests: <a href='mailto:strueng2026@proton.me'>strueng2026@proton.me</a>",
 
-        /* Terms & Conditions */
+        /* Terms */
         terms_title: "Terms & Conditions of Use",
         terms_p1: "This website is intended solely to provide information about the activities of Structured Engineering S.R.L. The contents do not constitute a binding commercial offer nor personalized technical or legal advice.",
         terms_p2: "Structured Engineering S.R.L. reserves the right to modify the website content at any time. Use of the website implies acceptance of these Terms & Conditions.",
         terms_p3: "For contractual agreements, specific conditions, or professional services, only the documents signed between the parties are legally binding."
     },
 
+    /* ============================================================
+       RUMENO
+    ============================================================ */
     ro: {
         title: "STRUCTURED ENGINEERING S.R.L.",
         subtitle: "Structură Ingineriei. Continuitate Operațională.",
@@ -225,7 +242,7 @@ const translations = {
         s6: "Guvernanță Tehnică",
         s7: "Stabilizarea Competențelor",
 
-        // DETALII SERVICII (panouri)
+        /* DETALII SERVICII */
         s1_d1: "Reducerea risipei, a timpilor morți și a variabilității.",
         s1_d2: "Intervenții țintite cu KPI clari și măsurabili.",
         s1_d3: "Vrei să afli unde sunt marjele ascunse? Scrie-mi.",
@@ -254,26 +271,34 @@ const translations = {
         s7_d2: "Reducem turnover-ul tehnic și vulnerabilitatea.",
         s7_d3: "Vrei un departament care nu se oprește niciodată? Scrie-mi.",
 
+        /* CONTACT */
         contacts_title: "Contact",
         email: "strueng2026@proton.me",
         phone: "Telefon: +39 389 78.70.017",
         location: "Locație: Italia",
 
+        /* EMAIL MULTILINGUA */
+        email_subject: "Structured Engineering — Cerere de informații",
+
         /* GDPR Banner */
         cookie_banner_text: "Acest site nu utilizează cookie‑uri de profilare. Sunt prezente doar cookie‑uri tehnice necesare funcționării corecte. <a href='#privacy' style='color: var(--gold);'>Politica de Confidențialitate</a> · <a href='#terms' style='color: var(--gold);'>Termeni &amp; Condiții</a>",
         cookie_banner_ok: "OK",
 
-        /* Privacy Policy */
+        /* Privacy */
         privacy_title: "Politica de Confidențialitate",
         privacy_p1: "Structured Engineering S.R.L. nu colectează date personale ale utilizatorilor prin acest site. Nu folosim cookie‑uri de profilare, instrumente de tracking, analytics sau servicii terțe.",
         privacy_p2: "Sunt prezente exclusiv cookie‑uri tehnice necesare funcționării corecte a site‑ului. Nicio informație nu este transmisă terților.",
-        privacy_p3: "Pentru informații sau solicitări: <a href='mailto:strueng2026@proton.me'>strueng2026@proton.me</a>",
+        privacy_p3: "Pentru informații sau solicitări: <a href='mailto:strueng2026@
 
         /* Termeni & Condiții */
         terms_title: "Termeni & Condiții de Utilizare",
         terms_p1: "Acest site are scop exclusiv informativ privind activitățile Structured Engineering S.R.L. Conținutul nu reprezintă ofertă comercială obligatorie și nici consultanță tehnică sau juridică personalizată.",
         terms_p2: "Structured Engineering S.R.L. își rezervă dreptul de a modifica conținutul site‑ului în orice moment. Utilizarea site‑ului implică acceptarea acestor Termeni & Condiții.",
-        terms_p3: "Pentru acorduri contractuale, condiții specifice sau servicii profesionale, sunt valabile exclusiv documentele semnate între părți."
+        terms_p3: "Pentru acorduri contractuale, condiții specifice sau servicii profesionale, sunt valabile exclusiv documentele semnate între părți.",
+
+        /* EMAIL MULTILINGUA */
+        email_subject: "Structured Engineering — Cerere de informații"
     }
 
 };
+
