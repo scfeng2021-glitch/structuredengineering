@@ -18,22 +18,23 @@
     body {
         padding-top: 140px;
         margin: 0;
-        font-family: 'Inter', sans-serif; /* PRIMA: Arial */
+        font-family: 'Inter', sans-serif;
         background-color: #0d0d0d;
         color: #e0e0e0;
 
-        /* ⭐ DISSOLVENZA ALL'APERTURA */
+        /* ⭐ EFFETTO SCHERMO NERO + APPARIZIONE LENTA */
         opacity: 0;
-        animation: fadeIn 1.2s ease forwards;
+        animation: fadeInSlow 2.4s ease forwards;
     }
 
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+    @keyframes fadeInSlow {
+        0%   { opacity: 0; }
+        40%  { opacity: 0; }   /* resta nero per un po’ */
+        100% { opacity: 1; }   /* appare lentamente */
     }
 
     h1, h2, h3 {
-        font-family: 'Cinzel', serif; /* PRIMA: Arial */
+        font-family: 'Cinzel', serif;
         letter-spacing: 1px;
     }
 
