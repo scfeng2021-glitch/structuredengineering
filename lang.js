@@ -201,104 +201,99 @@ const translations = {
     /* ============================================================
        RUMENO
     ============================================================ */
-    ro: {
-        title: "STRUCTURED ENGINEERING S.R.L.",
-        subtitle: "Structură Ingineriei. Continuitate Operațională.",
-        intro_title: "Continuitate Operațională și Excelență Structurată",
-        intro_text: "Structured Engineering transformă provocările operaționale în oportunități de creștere sustenabilă, garantând continuitate, fiabilitate și performanță industrială de nivel înalt.",
+   ro: {
+    title: "STRUCTURED ENGINEERING S.R.L.",
+    subtitle: "Structură Ingineriei. Continuitate Operațională.",
+    intro_title: "Continuitate Operațională și Excelență Structurată",
+    intro_text: "Structured Engineering transformă provocările operaționale în oportunități de creștere sustenabilă, garantând continuitate, fiabilitate și performanță industrială de nivel înalt.",
 
-        challenges_title: "Provocări Industriale Actuale",
-        ch1_title: "Downtime Neplanificat",
-        ch1_text: "Opririle frecvente reduc productivitatea și cresc costurile operaționale.",
-        ch2_title: "Pierderea Competențelor Critice",
-        ch2_text: "Dependența de un singur expert creează vulnerabilitate operațională.",
-        ch3_title: "Marje Erodate",
-        ch3_text: "Ineficiențele și risipa reduc profitabilitatea.",
-        ch4_title: "Procese Nestandardizate",
-        ch4_text: "Lipsa procedurilor structurate generează variabilitate și probleme de calitate.",
+    challenges_title: "Provocări Industriale Actuale",
+    ch1_title: "Downtime Neplanificat",
+    ch1_text: "Opririle frecvente reduc productivitatea și cresc costurile operaționale.",
+    ch2_title: "Pierderea Competențelor Critice",
+    ch2_text: "Dependența de un singur expert creează vulnerabilitate operațională.",
+    ch3_title: "Marje Erodate",
+    ch3_text: "Ineficiențele și risipa reduc profitabilitatea.",
+    ch4_title: "Procese Nestandardizate",
+    ch4_text: "Lipsa procedurilor structurate generează variabilitate și probleme de calitate.",
 
-        vision_title: "Viziunea Noastră",
-        v1_title: "Continuitate Operațională",
-        v1_text: "Stabilitate și fiabilitate în procesele de producție.",
-        v2_title: "Excelență Structurată",
-        v2_text: "Procese optimizate și standardizate.",
-        v3_title: "Creștere Sustenabilă",
-        v3_text: "Rezultate măsurabile și durabile.",
+    vision_title: "Viziunea Noastră",
+    v1_title: "Continuitate Operațională",
+    v1_text: "Stabilitate și fiabilitate în procesele de producție.",
+    v2_title: "Excelență Structurată",
+    v2_text: "Procese optimizate și standardizate.",
+    v3_title: "Creștere Sustenabilă",
+    v3_text: "Rezultate măsurabile și durabile.",
 
-        method_title: "Metodologie Operațională",
-        m1_title: "1. Analiză Diagnostică",
-        m1_text: "Identificarea blocajelor și oportunităților.",
-        m2_title: "2. Proiectare Structurată",
-        m2_text: "Soluții personalizate cu termene și livrabile clare.",
-        m3_title: "3. Implementare",
-        m3_text: "Monitorizarea KPI și stabilizarea rezultatelor.",
+    method_title: "Metodologie Operațională",
+    m1_title: "1. Analiză Diagnostică",
+    m1_text: "Identificarea blocajelor și oportunităților.",
+    m2_title: "2. Proiectare Structurată",
+    m2_text: "Soluții personalizate cu termene și livrabile clare.",
+    m3_title: "3. Implementare",
+    m3_text: "Monitorizarea KPI și stabilizarea rezultatelor.",
 
-        services_title: "Servicii Principale",
-        s1: "Optimizarea Proceselor",
-        s2: "Transfer de Know‑How",
-        s3: "Standardizare Operațională",
-        s4: "Consultanță Strategică",
-        s5: "CAD & Design 3D",
-        s6: "Guvernanță Tehnică",
-        s7: "Stabilizarea Competențelor",
+    services_title: "Servicii Principale",
+    s1: "Optimizarea Proceselor",
+    s2: "Transfer de Know‑How",
+    s3: "Standardizare Operațională",
+    s4: "Consultanță Strategică",
+    s5: "CAD & Design 3D",
+    s6: "Guvernanță Tehnică",
+    s7: "Stabilizarea Competențelor",
 
-        /* DETALII SERVICII */
-        s1_d1: "Reducerea risipei, a timpilor morți și a variabilității.",
-        s1_d2: "Intervenții țintite cu KPI clari și măsurabili.",
-        s1_d3: "Vrei să afli unde sunt marjele ascunse? Scrie-mi.",
+    /* DETALII SERVICII */
+    s1_d1: "Reducerea risipei, a timpilor morți și a variabilității.",
+    s1_d2: "Intervenții țintite cu KPI clari și măsurabili.",
+    s1_d3: "Vrei să afli unde sunt marjele ascunse? Scrie-mi.",
 
-        s2_d1: "Documentăm, standardizăm și transferăm competențe critice.",
-        s2_d2: "Eliminăm dependența de un singur operator.",
-        s2_d3: "Vrei să stabilizezi departamentul? Hai să vorbim.",
+    s2_d1: "Documentăm, standardizăm și transferăm competențe critice.",
+    s2_d2: "Eliminăm dependența de un singur operator.",
+    s2_d3: "Vrei să stabilizezi departamentul? Hai să vorbim.",
 
-        s3_d1: "Proceduri clare, repetabile și stabile.",
-        s3_d2: "Reducerea erorilor și creșterea calității.",
-        s3_d3: "Vrei procese mai stabile? Te pot ajuta.",
+    s3_d1: "Proceduri clare, repetabile și stabile.",
+    s3_d2: "Reducerea erorilor și creșterea calității.",
+    s3_d3: "Vrei procese mai stabile? Te pot ajuta.",
 
-        s4_d1: "Analiză structurată, roadmap și priorități operaționale.",
-        s4_d2: "Decizii bazate pe date, nu pe intuiție.",
-        s4_d3: "Ai nevoie de o viziune clară? O putem construi.",
+    s4_d1: "Analiză structurată, roadmap și priorități operaționale.",
+    s4_d2: "Decizii bazate pe date, nu pe intuiție.",
+    s4_d3: "Ai nevoie de o viziune clară? O putem construi.",
 
-        s5_d1: "Modele tehnice, componente, revizii și optimizări.",
-        s5_d2: "Suport direct pentru proiectanți și ateliere.",
-        s5_d3: "Ai un component de îmbunătățit? Trimite-l.",
+    s5_d1: "Modele tehnice, componente, revizii și optimizări.",
+    s5_d2: "Suport direct pentru proiectanți și ateliere.",
+    s5_d3: "Ai un component de îmbunătățit? Trimite-l.",
 
-        s6_d1: "Guvernanță tehnică, procese, responsabilități și continuitate.",
-        s6_d2: "Reducerea haosului operațional și creșterea controlului.",
-        s6_d3: "Vrei o structură mai solidă? Suntem aici.",
+    s6_d1: "Guvernanță tehnică, procese, responsabilități și continuitate.",
+    s6_d2: "Reducerea haosului operațional și creșterea controlului.",
+    s6_d3: "Vrei o structură mai solidă? Suntem aici.",
 
-        s7_d1: "Stabilizăm roluri, sarcini și competențe critice.",
-        s7_d2: "Reducem turnover-ul tehnic și vulnerabilitatea.",
-        s7_d3: "Vrei un departament care nu se oprește niciodată? Scrie-mi.",
+    s7_d1: "Stabilizăm roluri, sarcini și competențe critice.",
+    s7_d2: "Reducem turnover-ul tehnic și vulnerabilitatea.",
+    s7_d3: "Vrei un departament care nu se oprește niciodată? Scrie-mi.",
 
-        /* CONTACT */
-        contacts_title: "Contact",
-        email: "strueng2026@proton.me",
-        phone: "Telefon: +39 389 78.70.017",
-        location: "Locație: Italia",
+    /* CONTACT */
+    contacts_title: "Contact",
+    email: "strueng2026@proton.me",
+    phone: "Telefon: +39 389 78.70.017",
+    location: "Locație: Italia",
 
-        /* EMAIL MULTILINGUA */
-        email_subject: "Structured Engineering — Cerere de informații",
+    /* EMAIL MULTILINGUA */
+    email_subject: "Structured Engineering — Cerere de informații",
 
-        /* GDPR Banner */
-        cookie_banner_text: "Acest site nu utilizează cookie‑uri de profilare. Sunt prezente doar cookie‑uri tehnice necesare funcționării corecte. <a href='#privacy' style='color: var(--gold);'>Politica de Confidențialitate</a> · <a href='#terms' style='color: var(--gold);'>Termeni &amp; Condiții</a>",
-        cookie_banner_ok: "OK",
+    /* GDPR Banner */
+    cookie_banner_text: "Acest site nu utilizează cookie‑uri de profilare. Sunt prezente doar cookie‑uri tehnice necesare funcționării corecte. <a href='#privacy' style='color: var(--gold);'>Politica de Confidențialitate</a> · <a href='#terms' style='color: var(--gold);'>Termeni &amp; Condiții</a>",
+    cookie_banner_ok: "OK",
 
-        /* Privacy */
-        privacy_title: "Politica de Confidențialitate",
-        privacy_p1: "Structured Engineering S.R.L. nu colectează date personale ale utilizatorilor prin acest site. Nu folosim cookie‑uri de profilare, instrumente de tracking, analytics sau servicii terțe.",
-        privacy_p2: "Sunt prezente exclusiv cookie‑uri tehnice necesare funcționării corecte a site‑ului. Nicio informație nu este transmisă terților.",
-        privacy_p3: "Pentru informații sau solicitări: <a href='mailto:strueng2026@
+    /* Privacy */
+    privacy_title: "Politica de Confidențialitate",
+    privacy_p1: "Structured Engineering S.R.L. nu colectează date personale ale utilizatorilor prin acest site. Nu folosim cookie‑uri de profilare, instrumente de tracking, analytics sau servicii terțe.",
+    privacy_p2: "Sunt prezente exclusiv cookie‑uri tehnice necesare funcționării corecte a site‑ului. Nicio informație nu este transmisă terților.",
+    privacy_p3: "Pentru informații sau solicitări: <a href='mailto:strueng2026@proton.me'>strueng2026@proton.me</a>",
 
-        /* Termeni & Condiții */
-        terms_title: "Termeni & Condiții de Utilizare",
-        terms_p1: "Acest site are scop exclusiv informativ privind activitățile Structured Engineering S.R.L. Conținutul nu reprezintă ofertă comercială obligatorie și nici consultanță tehnică sau juridică personalizată.",
-        terms_p2: "Structured Engineering S.R.L. își rezervă dreptul de a modifica conținutul site‑ului în orice moment. Utilizarea site‑ului implică acceptarea acestor Termeni & Condiții.",
-        terms_p3: "Pentru acorduri contractuale, condiții specifice sau servicii profesionale, sunt valabile exclusiv documentele semnate între părți.",
-
-        /* EMAIL MULTILINGUA */
-        email_subject: "Structured Engineering — Cerere de informații"
-    }
-
+    /* Termeni */
+    terms_title: "Termeni & Condiții de Utilizare",
+    terms_p1: "Acest site are scop exclusiv informativ privind activitățile Structured Engineering S.R.L. Conținutul nu reprezintă ofertă comercială obligatorie și nici consultanță tehnică sau juridică personalizată.",
+    terms_p2: "Structured Engineering S.R.L. își rezervă dreptul de a modifica conținutul site‑ului în orice moment. Utilizarea site‑ului implică acceptarea acestor Termeni & Condiții.",
+    terms_p3: "Pentru acorduri contractuale, condiții specifice sau servicii profesionale, sunt valabile exclusiv documentele semnate între părți."
+}
 };
-
